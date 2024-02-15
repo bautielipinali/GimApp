@@ -75,6 +75,22 @@ main h1 {
 	box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% del viewport height */
+    background-image: url("https://media.istockphoto.com/id/953047628/es/foto/fondo-gimnasio-con-equipo-de.jpg?s=612x612&w=0&k=20&c=TeLvdkotQ7BW40Dy2kRz0L2Wa0klBm9WvCewIXwBFzk=");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Opcional: puedes ajustar la posición */
+}
+
+ 
+.titulo{
+text-align: center;
+padding-top: 350px;
+color: white;
+}
 
 h2{
 	text-align: center;

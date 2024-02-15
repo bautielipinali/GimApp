@@ -1,25 +1,27 @@
 <?php include("../db.php")?>
-<?php include("../includes/headersTurnosphp")?>
+<?php include("../includes/headersTurnos.php")?>
 
 <?php
 if(isset($_GET['id'])){
-$id_prod = $_GET['id'];
-$query = "SELECT * FROM turnos WHERE id_turno = $id_turno";
-$result = mysqli_query($conn, $query);
-if(mysqli_num_rows($result) ==1) {
-    $row = mysqli_fetch_array($result);
-    $nombre_prod = $row['nombre'];
-    $precio_prod = $row['apellido'];
-    $imgURL = $row['actividad'];
+    $id_turno = $_GET['id'];
+    $query = "SELECT * FROM turnos WHERE id_turno = $id_turno";
+    $result = mysqli_query($conn, $query);
+
+    if(mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_array($result);
+        $nombre_prod = $row['nombre'];
+        $precio_prod = $row['apellido'];
+        $imgURL = $row['id_actividad'];
     }
 }
-if (isset($_POST['update2'])){
-    $id_prod = $_GET['id'];
-    $nombre_prod = $_POST['nombre'];
-    $precio_prod = $_POST['apellido']; // Variable correcta para especie
-    $imgURL = $_POST['actividad']; // Variable para raza
 
-    $query = "UPDATE Turnos SET nombre = '$nombre', apellido = '$apellido', actividad = '$actividad' WHERE id_turno = $id_turno";
+if (isset($_POST['update2'])){
+    $id_turno = $_GET['id'];
+    $nombre_prod = $_POST['nombre'];
+    $precio_prod = $_POST['apellido'];
+    $imgURL = $_POST['id_actividad'];
+
+    $query = "UPDATE turnos SET nombre = '$nombre_prod', apellido = '$precio_prod', id_actividad = '$imgURL' WHERE id_turno = $id_turno";
     $result = mysqli_query($conn, $query);
 
     if (!$result){
@@ -34,21 +36,21 @@ if (isset($_POST['update2'])){
     }
 }
 ?>
-    <div class="container">
-        <h2 class="register-title">ACTUALIZAR DATOS</h2>
-        <form action="updateData.php?id=<?php echo $_GET['id']; ?>" method="POST">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" value="<?php print $nombre;?>" class = "form-control" placeholder="Actualizar nombre">
+<div class="container">
+    <h2 class="register-title">ACTUALIZAR DATOS</h2>
+    <form action="updateData.php?id=<?php echo $_GET['id']; ?>" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" value="<?php print $nombre_prod;?>" class="form-control" placeholder="Actualizar nombre">
 
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" value="<?php print $apellido;?>" class = "form-control" placeholder="Actualizar apellido">
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" value="<?php print $precio_prod;?>" class="form-control" placeholder="Actualizar apellido">
 
-            <label for="actividad">Actividad:</label>
-             <input type="text" name="actividad" value="<?php print $actividad;?>" class="form-control" placeholder="Actualizar actividad">
+        <label for="id_actividad">Actividad:</label>
+        <input type="text" name="id_actividad" value="<?php print $imgURL;?>" class="form-control" placeholder="Actualizar actividad">
 
-            <button type="submit" name="update2">Actualizar</button>
-        </form>
-    </div>
-    
+        <button type="submit" name="update2">Actualizar</button>
+    </form>
+</div>
+
 
    

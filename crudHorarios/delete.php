@@ -4,7 +4,7 @@
     <div class ="card text-center">
         <div class="card-body">
             <br><br><br>
-            <h2 class="card-title">Eliminar categoria</h2>
+            <h2 class="card-title">Eliminar horario/h2>
             <div class="table-responsive-sm">
                 <table class="table">
                     <thead>

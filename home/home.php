@@ -32,7 +32,10 @@ $sql = "SELECT * FROM turnos";
 $result = $conn->query($sql);
 
 $sql_prod = "SELECT * FROM horarios";
-$result_prod = $conn->query($sql_prod)
+$result_prod = $conn->query($sql_prod);
+
+$sql_act = "SELECT * FROM actividades";
+$result_act = $conn->query($sql_act);
 ?>
     <div class="container">
         <h2 class="register-title">Registrar un Turno</h2>
@@ -43,8 +46,14 @@ $result_prod = $conn->query($sql_prod)
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" required placeholder="Apellido">
 
-            <label for="actividad">Actividad:</label>
-            <input type="text" id="actividad" name="imgURL" required placeholder="Actividad">
+            <label for="id_actividad">Actividad:</label>
+            <select id="id_actividad" name="id_actividad">
+                <?php
+                 while($row = $result_act->fetch_assoc()) {
+                 echo "<option value='" . $row['id_actividad'] . "'> " . $row['actividad'] . " </option>";
+                 }
+                 ?>
+            </select>
 
             <label for="id_horario">Horario:</label>
             <select id="id_horario" name="id_horario">

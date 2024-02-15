@@ -16,10 +16,13 @@ include("./db.php");
     <ul class="menu">
         <li><a href="./userRegister/register.php">Registrarse</a></li>
         <li><a href="./userLogin/login.php">Iniciar sesión</a></li>
-    </ul>
+</ul>
 </nav>
+<div class="bg-image">
 
 <h1 class="titulo">Registrate o Inicia sesión para agendar tu turno</h1>
+</div>
+
 
 </body>
 </html>

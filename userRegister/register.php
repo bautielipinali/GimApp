@@ -8,6 +8,10 @@
     <title>Register</title>
 </head>
 <body>
+    <div class="container">
+    <div class="box1">
+        <img class="img" src="https://static.vecteezy.com/system/resources/previews/022/653/988/non_2x/treadmill-in-modern-gym-toned-image-3d-rendering-generative-ai-free-photo.jpg" alt="">
+        </div>
         <div class="box2">
             <h2>Registra tu cuenta</h2>
             <form action="save.php" method="POST">
@@ -30,6 +34,5 @@
         </div>
 
     </div>
-    
 </body>
 </html>

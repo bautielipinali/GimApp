@@ -26,7 +26,7 @@
                             <tr>
                                 <td><?php echo $row['nombre']?></td>
                                 <td><?php echo $row['apellido']?></td>
-                                <td><?php echo $row['actividad']?></td>
+                                <td><?php echo $row['id_actividad']?></td>
 
                                 <td>
                                     <a href="updateData.php?id=<?php echo $row['id_turno']?>">

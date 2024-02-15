@@ -26,7 +26,7 @@
                             <tr>
                                 <td class="text-left"><?php echo $row['nombre']?></td>
                                 <td class="text-left"><?php echo $row['apellido']?></td>
-                                <td class="text-left"><?php echo $row['actividad']?></td>
+                                <td class="text-left"><?php echo $row['id_actividad']?></td>
                             </tr>
                         <?php } ?>
                         

@@ -4,14 +4,14 @@
 if (isset($_POST['guardar_turno'])){
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
-    $actividad = $_POST['actividad'];
+    $id_actividad = $_POST['id_actividad'];
     $id_horario= $_POST['id_horario'];
 
     //echo $nombres;
     //echo $direccion;
 }
 
-    $query = "INSERT INTO Turnos(nombre, apellido, actividad, id_horario) VALUES ('$nombre','$apellido','$actividad','$id_horario')";
+    $query = "INSERT INTO Turnos(nombre, apellido, id_actividad, id_horario) VALUES ('$nombre','$apellido','$id_actividad','$id_horario')";
 	//die( $query);
     $result = mysqli_query($conn, $query);
     if(!$result){

@@ -16,6 +16,7 @@
                 <li><a href="./crudUsuario/registerUsuario.php">Usuarios</a></li>
                 <li><a href="./crudEmpleados/registerVeterinario.php">Empleados</a></li>
                 <li><a href="./crudHorarios/registerHorario.php">Horarios</a></li>
+                <li><a href="./crudActividades/registerActividad.php">Actividad</a></li>
 
                 <li><a href="salir.php">Cerrar sesión</a></li>
             </ul>
@@ -45,7 +46,7 @@
                         <td><?php echo $row['id_horario']; ?></td>
                         <td><?php echo $row['nombre']; ?></td>
                         <td><?php echo $row['apellido']; ?></td>
-                        <td><?php echo $row['actividad']; ?></td>
+                        <td><?php echo $row['id_actividad']; ?></td>
                     </tr>
                 <?php } ?>
         </tbody>
